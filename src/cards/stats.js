@@ -502,7 +502,7 @@ const renderStatsCard = (stats, options = {}) => {
   }
 
   const card = new Card({
-    customTitle: custom_title || "📊 Estatísticas do GitHub de Vitor Martins",
+    customTitle: custom_title,
     defaultTitle: statItems.length
       ? i18n.t("statcard.title")
       : i18n.t("statcard.ranktitle"),
