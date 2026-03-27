@@ -36,6 +36,7 @@ export default async (req, res) => {
     size_weight,
     count_weight,
     custom_title,
+    title,
     locale,
     border_radius,
     border_color,
@@ -135,7 +136,7 @@ export default async (req, res) => {
 
     return res.send(
       renderTopLanguages(topLangs, {
-        custom_title,
+        custom_title: title || custom_title,
         hide_title: parseBoolean(hide_title),
         hide_border: parseBoolean(hide_border),
         card_width: parseInt(card_width, 10),
